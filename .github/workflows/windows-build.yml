@@ -28,13 +28,10 @@ jobs:
     - name: Run PyInstaller
       run: |
         pyinstaller --onefile \
-          --add-data \"configs/x.rtf;.\" \
-          --add-data \"configs/default_prolong_v2.exe;.\" \
+          --add-data \"x.rtf;.\" \
+          --add-data \"default_prolong_v2.exe;.\" \
           --name launcher \
           main.py
-        # Добавляем проверку содержимого dist
-        echo "Contents of dist directory:"
-        dir dist
 
     - name: Upload artifact
       uses: actions/upload-artifact@v3
