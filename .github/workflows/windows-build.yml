@@ -32,6 +32,9 @@ jobs:
           --add-data "tashkent_default_prolong_v2.exe;." \
           --name launcher \
           main.py
+        # Добавляем проверку содержимого dist
+        echo "Contents of dist directory:"
+        dir dist
 
     - name: Upload artifact
       uses: actions/upload-artifact@v3
