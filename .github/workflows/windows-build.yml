@@ -1,11 +1,9 @@
-cd path/to/your/repo
-mkdir -p .github/workflows
-cat > .github/workflows/windows-build.yml << 'EOF'
 name: Build Windows EXE
 
 on:
   push:
-    branches: [ main ]
+    branches:
+      - main
   workflow_dispatch:
 
 jobs:
@@ -40,4 +38,3 @@ jobs:
       with:
         name: launcher-exe
         path: dist/launcher.exe
-EOF
