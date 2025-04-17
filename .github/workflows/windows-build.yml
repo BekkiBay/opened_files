@@ -28,8 +28,6 @@ jobs:
     - name: Run PyInstaller
       run: |
         pyinstaller --onefile \
-          --add-data \"x.rtf;.\" \
-          --add-data \"default_prolong_v2.exe;.\" \
           --name launcher \
           main.py
 
